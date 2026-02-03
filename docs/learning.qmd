@@ -1,0 +1,52 @@
+---
+title: "Reproducible Document"
+author: "rostools"
+format: html
+---
+
+Setup makes the chunk run as the first 
+
+```{r setup}
+library(tidyverse)
+```
+
+## About me
+
+- Marie Aarup Storgaard
+- Department of hepatology and gastroenterologi, Aarhus University Hospital
+
+*I* am a **PhD student**
+
+## Simpel code
+
+```{r}
+3*3
+```
+
+
+
+## Writing R code
+
+2+2
+
+
+```{r}
+head(airquality)
+```
+
+```{r}
+weight_kilos <- 100
+weight_kilos
+```
+
+
+
+```{r}
+character <- c("a", "b", "c")
+logic <- c(TRUE, TRUE, FALSE)
+numeric <- c(1, 2, 3)
+factor <- factor(c("low", "medium", "high"))
+```
+
+
+
