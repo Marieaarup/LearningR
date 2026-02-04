@@ -89,3 +89,14 @@ ggplot(post_meal_data, aes(x = BMI)) +
 
 Af @fig-bmi-histo fremgår det, at ...
 
+## Excercise: discrete plots
+
+```{r}
+#| fig-cap:  "Number of group participants"
+#| label: fig-group
+
+ggplot(post_meal_data, aes(x= Group)) +
+  geom_bar()
+```
+
+see @fig-group above for a cool plot!
