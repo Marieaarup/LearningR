@@ -6,8 +6,23 @@ format: html
 
 Setup makes the chunk run as the first 
 
+```{r}
+download.file(
+  url = "https://zenodo.org/records/4989220/files/Eliasson_data2.csv?download=1",
+  destfile = here::here("data/post-meal-insulin.csv")
+)
+```
+
+```{r}
+```
+
+
+
+
 ```{r setup}
 library(tidyverse)
+
+post_meal_data <- read_csv2(here::here("data/post-meal-insulin.csv"))
 ```
 
 ## About me
@@ -49,4 +64,12 @@ factor <- factor(c("low", "medium", "high"))
 ```
 
 
+
+## Showing the data
+
+```{r}
+post_meal_data
+
+glimpse(post_meal_data)
+```
 
