@@ -321,3 +321,28 @@ post_meal_data |>
   geom_point() +
   scale_colour_viridis_c(option = "inferno")
 ```
+
+## Calculation summary statistics
+
+```{r}
+tidied_post_meal_data %>%
+  summarise(
+    sum_BMI = sum(BMI, na.rm = TRUE),
+    distinct_BMI = n_distinct(BMI),
+    n_BMI = n(),
+    max_bmi = max(BMI),
+    min_BMI = min(BMI)
+  )
+```
+## Summarise with group by
+
+```{r}
+tidied_post_meal_data %>%
+  group_by(Group) %>%
+  summarise(
+    "Mean BMI (kg/m^2^)" = round(mean(BMI), 1),
+    "Mean Age (yrs)" = round(mean(Age), 1)
+  ) %>%
+  ungroup() %>%
+  knitr::kable()
+```
